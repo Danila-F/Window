@@ -1,6 +1,4 @@
 import tkinter as tk
-
-from tkinter import *
 from tkinter import messagebox
 
 
@@ -9,29 +7,29 @@ def show_text():
     messagebox.showinfo(title="Very USEFUL message", message=text)
 
 
-window = Tk()
+window = tk.Tk()
 window.title("VUP. Very USEFUL program")
 window.geometry("500x100")
 
-frame = Frame(
+frame = tk.Frame(
     window,
     padx=10,  # отступ по горизонтали
     pady=10  # отступ по вертикали
 )
 frame.pack(expand=True)
 
-text_lb = Label(
+text_lb = tk.Label(
     frame,
     text="Введите фразу, которую хотите вывести на экран:"
 )
 text_lb.grid(row=0, column=0, padx=(0, 10))
 
-text_tf = Entry(
+text_tf = tk.Entry(
     frame
 )
 text_tf.grid(row=0, column=1, ipadx=30)
 
-cal_btn = Button(
+cal_btn = tk.Button(
     frame,
     text="Жмяк",  # надпись на кнопке
     command=show_text
